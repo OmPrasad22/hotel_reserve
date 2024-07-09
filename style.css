@@ -1,0 +1,495 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.chatbot{
+    position: fixed;
+    width: 4vmax;
+    height: 4vmax;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    right: 2%;
+    bottom: 5%;
+}
+.chatbot a{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: chocolate;
+}
+.chatbot a img{
+    width: 60%;
+    height: 100%;
+}
+.chathov{
+    display: none;
+}
+.chatbot:hover + .chathov{
+    position: fixed;
+    background-color: white;
+    padding: 1%;
+    border-radius: 50px;
+    font-weight: bold;
+    right: 3%;
+    bottom: 16%;
+    display: block;
+}
+#popup{
+    position: fixed;
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: chocolate;
+    border-radius: 50px;
+    font-size: 125%;
+    bottom: 5%;
+    right: 40%;
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: gainsboro;
+}
+::-webkit-scrollbar-thumb {
+    background: chocolate; 
+    border-radius: 1000px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(181, 77, 4); 
+    transition: 0.5s;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.div1{
+    display: flex;
+    background-image: url(Components/tab_img_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.header{
+    width: 100%;
+    height: 100px;
+}
+nav{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+.logo{
+    width: 10%;
+    height: 10%;
+    margin: 1%;
+    margin-left: 3%;
+    display: flex;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+nav ul{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    margin-right: 2%;
+}
+nav ul li{
+    display: inline-block;
+    margin: 2%;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: chocolate;
+    /* background-color: chocolate; */
+    transition: 0.5s;
+}
+.activelink{
+    color: chocolate;
+}
+.div1 .message{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8%;
+    font-weight: bolder;
+    font-size: 250%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: chocolate;
+}
+.div1 .bn-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.div1 .bn-btn a{
+    text-decoration: none;
+    background-color: chocolate;
+    padding: 1.5%;
+    width: 12%;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    font-size: 140%;
+    font-weight: bolder;
+}
+.div1 .bn-btn a:hover{
+    background-color: gray;
+    color: black;
+    transition: 0.5s;
+}
+.div1 .data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.div1 .inp-field{
+    display: flex;
+    background-color: chocolate;
+    width: 70%;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 0.5%;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 125%;
+    font-weight: bolder;
+    color: white;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.inp-field select{
+    padding: 0.5%;
+    font-weight: bolder;
+    background-color: inherit;
+    border-color: white;
+    cursor: pointer;
+    height: 100%;
+    width: 16%;
+}
+.inp-field label{
+    height: 100%;
+    padding: 0.5%;
+    width: 14%;
+    padding-right: 2%;
+    text-align: end;
+}
+.inp-field input[type="date"]{
+    height: 100%;
+    width: 14%;
+    margin-right: 1%;
+    color: white;
+    background-color: inherit;
+    border-color: white;
+    padding: 0.55%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.bn-ca{
+    width: 14%;
+    height: 100%;
+    margin-left: 1%;
+}
+.bn-ca button{
+    background-color: grey;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    padding-left: 7%;
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-align: start;
+}
+.bn-ca button:hover{
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.div2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: gainsboro;
+}
+.div2 .message{
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 250%;
+    padding: 2%;
+}
+.fh{
+    display: flex;
+    justify-content: start;
+    background-color: white;
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+.fh img{
+    height: 100%;
+    width: 50%;
+}
+.fh label{
+    font-weight: normal;
+    font-size: 125%;
+    height: 100%;
+    line-height: 1.5;
+}
+.fh label[for="hloc"]{
+    font-weight: bold;
+    font-size: 110%;
+}
+.div2 .fh-message{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: start;
+    padding: 2%;
+}
+.div2 .fh-message .bn-btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.div2 .fh-message .bn-btn a{
+    color: white;
+    background-color: chocolate;
+    text-decoration: none;
+    padding: 2%;
+    width: 30%;
+    font-weight: bold;
+    font-size: 125%;
+}
+.div2 .fh-message .bn-btn a:hover{
+    color: black;
+    background-color: darkgray;
+    transition: 0.5s;
+}
+.div3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-bottom: 2%;
+}
+.div3 .hotels-fact{
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 250%;
+    padding: 2%;
+    width: 100%;
+}
+.div3 .svg{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: 1%;
+}
+.div3 .svg .svg-in{
+    height: auto;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div3 .svg .svg-in button:hover{
+    cursor: pointer;
+    background-color: gainsboro;
+    color: chocolate;
+    transition: 0.5s;
+}
+.div3 .svg .svg-in button{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 2%;
+    height: 75%;
+    width: 75%;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+.div3 .svg .svg-in img{
+    height: 50%;
+    width: 50%;
+    fill: aqua;
+}
+.svg-m img{
+    width: 100%;
+    height: auto;
+    align-items: end;
+}
+.svg-m{
+    position: relative;
+    animation:animateright 3s infinite;
+}
+@keyframes animateright{
+    from{
+        right: -5%;
+        opacity:0;
+    } 
+    to{
+        right: 0%;
+        opacity:1;
+    }
+}
+.svg-content .para{
+    font-weight: bold;
+    color: white;
+    padding: 3%;
+    font-size: 125%;
+}
+.div3 .svg-content{
+    width: 90%;
+    background-color: chocolate;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+.div4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+}
+.div4 .footer{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.div4 .footer .data{
+    width: 100%;
+    height: auto;
+    font-size: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+.div4 .footer .data label{
+    font-weight: bold;
+    padding-bottom: 5%;
+}
+.div4 .footer .data ul{
+    list-style: none;
+}
+.div4 .footer .data ul li{
+    padding: 5%;
+}
+.div4 .footer .data ul a{
+    text-decoration: none;
+    color: chocolate;
+    cursor: pointer;
+}
+.div4 .footer .data label[for="tab"]+ul a:hover{
+    color: black;
+    text-decoration: underline chocolate;
+    transition: 0.5s;
+}
+.div4 .footer .data .send-mail{
+    padding-top: 10%;
+}
+.div4 .footer .data .send-mail input{
+    padding: 2%;
+    height: auto;
+    width: 70%;
+    color: chocolate;
+}
+.div4 .footer .data .send-mail button{
+    text-decoration: none;
+    background-color: chocolate;
+    padding: 2.5%;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.div4 .footer .data .send-mail button:hover{
+    color: black;
+    background-color: gray;
+    transition: 0.5s;
+    padding: 3%;
+}
+.div4 .footer .data p{
+    width: 80%;
+    line-height: 200%;
+}
+.div4 .footer .data .copyr{
+    padding-top: 15%;
+}
+.div4 .footer .data .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div4 .footer .data .icons a img{
+    height: auto;
+    width: 40%;
+}
+.div4 .footer .data .icons a{
+    border-radius: 100%;
+    text-align: center;
+}
+.admin a{
+    color: chocolate;
+    font-weight: bold;
+    text-decoration: solid;
+}
