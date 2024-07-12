@@ -31,17 +31,16 @@
     }
     else{
         $up=0;
-        if(!file_exists("Components/" . basename($img))){
+        if($file_type == "jpg" || $file_type == "jpeg" || $file_type == "png"){
             if($file_size < 2097152){
-                if($file_type == "jpg" || $file_type == "jpeg" || $file_type == "png"){
+                if(!file_exists("Components/" . basename($img))){
                     $up=1;
                 }
                 else{
-                    echo '<script>
-                    alert("Image is not .jpg,.png,.jpeg!");
-                    window.location.href="admin_edithotel.php?uphname=';echo $hid;echo'";
-                    </script>';
-                    $up= 0;
+                    $t = pathinfo($img, PATHINFO_FILENAME);
+                    $t = $t."1";
+                    $img = $t.".".$file_type;
+                    $up=1;
                 }
             }
             else{
@@ -54,10 +53,10 @@
         }
         else{
             echo '<script>
-            alert("Image is already exist!");
+            alert("Image is not .jpg,.png,.jpeg!");
             window.location.href="admin_edithotel.php?uphname=';echo $hid;echo'";
             </script>';
-            $up=0;
+            $up= 0;
         }
         if($up==1){
             $mysqli=new mysqli("localhost","root","","hotel_reserve");

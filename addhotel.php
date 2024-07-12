@@ -14,17 +14,16 @@
         $file_tmp=$_FILES['img']['tmp_name'];
         $file_size=$_FILES['img']['size'];
         $file_type=strtolower(pathinfo("Components/" . basename($file_name), PATHINFO_EXTENSION));
-        if(!file_exists("Components/" . basename($file_name))){
+        if($file_type == "jpg" || $file_type == "jpeg" || $file_type == "png"){
             if($file_size < 2097152){
-                if($file_type == "jpg" || $file_type == "jpeg" || $file_type == "png"){
+                if(!file_exists("Components/" . basename($file_name))){
                     $up=1;
                 }
                 else{
-                    echo '<script>
-                        alert("Image is not .jpg,.png,.jpeg!");
-                        window.location.href="admin_addhotel.php";
-                        </script>';
-                    $up= 0;
+                    $t = pathinfo($file_name, PATHINFO_FILENAME);
+                    $t = $t."1";
+                    $file_name = $t.".".$file_type;
+                    $up=1;
                 }
             }
             else{
@@ -37,14 +36,14 @@
         }
         else{
             echo '<script>
-                alert("Image is already exist!");
+                alert("Image is not .jpg,.png,.jpeg!");
                 window.location.href="admin_addhotel.php";
                 </script>';
-            $up=0;
+            $up= 0;
         }
-        $mysqli=new mysqli("localhost","root","","hotel_reserve");
-        $sql1="SELECT * FROM hotel WHERE aduser='".$aduser."' AND hname='".$hname."'";
         if($up==1){
+            $mysqli=new mysqli("localhost","root","","hotel_reserve");
+            $sql1="SELECT * FROM hotel WHERE aduser='".$aduser."' AND hname='".$hname."'";
             if($result=$mysqli->query($sql1)){
                 if(mysqli_num_rows($result) == 0){
                     $sql="INSERT INTO hotel(aduser,hname,htype,hloc,haddr,hdes,rent,img,avail) VALUES('".$aduser."','".$hname."','".$htype."','".$hloc."','".$haddr."','".$hdes."','".$rent."','".$file_name."','".$avail."')";
