@@ -33,32 +33,86 @@ if(pagename === "profile.php"){
     document.querySelector(".profile").classList.add("activelink");
 }
 
+let s = document.getElementById("chatdiv");
+let schat = 0;
+function chat(){
+    if(schat == 0){
+        s.style.display="block";
+        schat = 1;
+    }
+    else{
+        s.style.display="none";
+        schat = 0;
+    }
+}
+window.addEventListener('mouseup',function(event){
+    let sb = document.getElementById("chatbtn");
+    if(event.target != s && event.target.parentNode != sb && event.target.parentNode != s){
+        schat = 1;
+        chat();
+    }
+});  
+
+function chatappen(){
+    let inp = document.getElementById("chatinp");
+    let dpimg = document.getElementById("dp");
+    let messagesDiv = document.getElementById("messdiv");
+    let item = document.querySelector("#messdiv");
+    let newItem = document.createElement("div");
+    let error = document.createElement("div");
+    newItem.innerHTML=`<label for="bot" id="user" name="user">${inp.value}<img src="Components/${dpimg.innerHTML}" alt=""></label>`;
+    error.innerHTML=`<label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please enter a message below.</label>`;
+    if(inp.value==''){
+        item.appendChild(error);
+        inp.value="";
+    }
+    else{
+        item.appendChild(newItem);
+        fetch('chat.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `user=${encodeURIComponent(inp.value)}`
+        })
+        .then(response => response.text())
+        .then(bot => {
+            let botMessage = document.createElement('div');
+            botMessage.innerHTML = `<label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">${bot}</label>`;
+            item.appendChild(botMessage);
+            inp.value="";
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        });
+    }
+}
+
+
 //Slide message
 
-let i = 0;
-let txt = '| RESERVE ROOM FOR FAMILY VACATION |&| RESERVE ROOM FOR BUSINESS MEETINGS |&| RESERVE ROOM FOR TOUR ||';
-let speed = 50;
-typeWriter();
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-async function typeWriter() {
-  if (i < txt.length) {
-    if(txt.charAt(i) == "&"){
-        i = i+1;
-        await sleep(1000);
-        document.getElementById("slide-mess").innerHTML = "";
-    }
-    if(i==txt.length-1){
-        i=0;
-        await sleep(1000);
-        document.getElementById("slide-mess").innerHTML = "";
-    }
-    document.getElementById("slide-mess").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+// let i = 0;
+// let txt = '| RESERVE ROOM FOR FAMILY VACATION |&| RESERVE ROOM FOR BUSINESS MEETINGS |&| RESERVE ROOM FOR TOUR ||';
+// let speed = 50;
+// typeWriter();
+// function sleep(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
+// async function typeWriter() {
+//   if (i < txt.length) {
+//     if(txt.charAt(i) == "&"){
+//         i = i+1;
+//         await sleep(3000);
+//         document.getElementById("slide-mess").innerHTML = "";
+//     }
+//     if(i==txt.length-1){
+//         i=0;
+//         await sleep(3000);
+//         document.getElementById("slide-mess").innerHTML = "";
+//     }
+//     document.getElementById("slide-mess").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
 
 // Hotels Facilities
 

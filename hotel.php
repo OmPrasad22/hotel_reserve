@@ -21,8 +21,23 @@ echo '
     <script defer src="activepage.js"></script>
 </head>
 <body>
-    <div class="chatbot"><a href="#"><img src="Components/Chatbot.svg" alt=""></a></div>
+    <div class="chatbot" onclick="chat()"><img src="Components/Chatbot.svg" alt=""></div>
     <div class="chathov">Hi, How can I help you ?</div>
+    <div id="chatdiv" style="display: none;">
+        <div class="chat-mess" id="messdiv">';
+            if($login != "0"){
+                echo '<label id="dp" hidden>dpimg.png</label>';
+            }
+            else{
+                echo '<label id="dp" hidden>';echo $_SESSION['dp'];echo'</label>';
+            }
+            echo '<label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">Hello! I am aao, the personal assistant of HöFE who will help you!</label>
+            <label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">I can help you find the best hotels on this page.</label>
+            <label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please send a message below.</label>
+        </div>
+        <input type="text" id="chatinp">
+        <button id="chatbtn" onclick="chatappen()"><img src="Components/svg/send.png" alt=""></button>
+    </div>
     <div class="container">
         <div class="div1">
             <div class="header">
