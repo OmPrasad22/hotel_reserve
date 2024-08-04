@@ -16,6 +16,10 @@ body{
     right: 2%;
     bottom: 5%;
     z-index: 1;
+    align-items: center;
+    border-radius: 50%;
+    background-color: chocolate;
+    cursor: pointer;
 }
 #chatdiv{
     position: fixed;
@@ -30,18 +34,10 @@ body{
     overflow-y: scroll;
     z-index: 1;
 }
-.chatbot{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: chocolate;
-    cursor: pointer;
-}
 .chatbot img{
     width: 60%;
     height: 100%;
+    z-index: 1;
 }
 .chathov{
     display: none;
@@ -77,6 +73,11 @@ body{
     justify-content: left;
     width: 90%;
     margin-bottom: 3%;
+}
+#chatdiv label[id="bot"] a{
+    color: chocolate;
+    font-family: Arial;
+    font-weight: bold;
 }
 #chatdiv label[id="user"]{
     color: chocolate;
@@ -359,7 +360,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: start;
     flex-direction: column;
-    text-align: start;
+    text-align: justify;
     padding: 2%;
 }
 .div2 .fh-message .bn-btn{
@@ -441,7 +442,6 @@ nav ul li a:hover{
 }
 .svg-m img{
     width: 100%;
-    height: auto;
     align-items: end;
 }
 .svg-m{
@@ -460,9 +460,10 @@ nav ul li a:hover{
 }
 .svg-content .para{
     font-weight: bold;
-    color: white;
+    color: gainsboro;
     padding: 3%;
     font-size: 125%;
+    text-align: justify;
 }
 .div3 .svg-content{
     width: 90%;
@@ -495,6 +496,7 @@ nav ul li a:hover{
     justify-content: start;
     flex-direction: column;
     padding-bottom: 5%;
+    text-align: justify;
 }
 .div4 .footer .data label{
     font-weight: bold;

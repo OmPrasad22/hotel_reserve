@@ -29,7 +29,6 @@ echo '
                 echo '<label id="dp" hidden>';echo $_SESSION['dp'];echo'</label>';
             }
             echo '<label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">Hello! I am aao, the personal assistant of HöFE who will help you!</label>
-            <label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">I can help you find the best hotels on this page.</label>
             <label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please send a message below.</label>
         </div>
         <input type="text" id="chatinp">
@@ -71,25 +70,25 @@ echo '
                         <div class="date">28th Aug</div>
                     </div>
                     <label class="b-con">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, in laboriosam porro quidem dolore.
+                        Friendly and personal service The staff were all very friendly and helpful and no request for assistance was a problem for them.We would definitely stay there again.
                     </label>
                 </div>
                 <div class="content">
                     <div class="b-img">
                         <img src="Components/review2.jpeg" alt="">
-                        <div class="date">28th Aug</div>
+                        <div class="date">1st May</div>
                     </div>
                     <label class="b-con">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, in laboriosam porro quidem dolore.
+                        Nice jazz-evening in Hotel Arthur.Room was just for my needs for this type of "staycation. Suprisingly fun jazz evening with good tapas table and nice wines
                     </label>
                 </div>
                 <div class="content">
                     <div class="b-img">
                         <img src="Components/review3.jpeg" alt="">
-                        <div class="date">28th Aug</div>
+                        <div class="date">9th Dec</div>
                     </div>
                     <label class="b-con">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, in laboriosam porro quidem dolore.
+                        Hospitality, kindness, cleanliness ans service were there as expected. I can only advise you to continue this way same if it would be nice to offer some croissants and pains au chocolats at the breakfast.
                     </label>
                 </div>
                 <div class="content">
@@ -137,7 +136,7 @@ echo '
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">

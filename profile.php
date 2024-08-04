@@ -42,7 +42,6 @@ echo '
                 echo '<label id="dp" hidden>';echo $_SESSION['dp'];echo'</label>';
             }
             echo '<label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">Hello! I am aao, the personal assistant of HöFE who will help you!</label>
-            <label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">I can help you find the best hotels on this page.</label>
             <label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please send a message below.</label>
         </div>
         <input type="text" id="chatinp">
@@ -73,7 +72,7 @@ echo '
                 </nav>
             </div>
             <div class="message">
-                Account Center
+                User Profile
             </div>
         </div>
         <form action="profile1.php" method="post" enctype="multipart/form-data">
@@ -167,7 +166,7 @@ echo '
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">

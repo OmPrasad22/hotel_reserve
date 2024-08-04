@@ -41,7 +41,7 @@ echo '
     <script defer src="activepage.js"></script>
 </head>
 <body>
-    <div class="chatbot" onclick="chat()"><img src="Components/Chatbot.svg" alt=""></div>
+    <div class="chatbot" onclick="chat()" id="cbbtn"><img src="Components/Chatbot.svg" alt=""></div>
     <div class="chathov">Hi, How can I help you ?</div>
     <div id="chatdiv" style="display: none;">
         <div class="chat-mess" id="messdiv">';
@@ -52,7 +52,6 @@ echo '
                 echo '<label id="dp" hidden>';echo $_SESSION['dp'];echo'</label>';
             }
             echo '<label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">Hello! I am aao, the personal assistant of HöFE who will help you!</label>
-            <label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">I can help you find the best hotels on this page.</label>
             <label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please send a message below.</label>
         </div>
         <input type="text" id="chatinp">
@@ -119,7 +118,7 @@ echo '
                 | Featured Hotels |
             </div>';
             $mysqli=new mysqli("localhost","root","","hotel_reserve");
-            $sql="SELECT * FROM hotel LIMIT 3";
+            $sql="SELECT * FROM hotel ORDER BY RAND() LIMIT 3";
             $result2=mysqli_query($mysqli,$sql);
             if($result2->num_rows > 0){
                 while($data=mysqli_fetch_array($result2)){
@@ -174,7 +173,7 @@ echo '
                 </div>
             </div>
             <div class="svg-content">
-                <div id="text" class="para"> [ * Text Message * ] </div>
+                <div id="text" class="para"></div>
                 <img class="svg-m" src="Components/gym.jpg" alt="">
                 <img class="svg-m" src="Components/bar.jpg" alt="">
                 <img class="svg-m" src="Components/pickup.jpg" alt="">
@@ -198,7 +197,7 @@ echo '
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">

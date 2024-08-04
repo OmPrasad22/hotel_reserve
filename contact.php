@@ -29,7 +29,6 @@ echo '
                 echo '<label id="dp" hidden>';echo $_SESSION['dp'];echo'</label>';
             }
             echo '<label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">Hello! I am aao, the personal assistant of HöFE who will help you!</label>
-            <label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">I can help you find the best hotels on this page.</label>
             <label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please send a message below.</label>
         </div>
         <input type="text" id="chatinp">
@@ -72,11 +71,11 @@ echo '
                 <div class="form">
                     <div class="form-data">
                         <label for="head">Our Address</label>
-                        <label for="context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptas.</label>
-                        <label for="address"><img src="Components/svg/address-book-regular.svg" alt="">Address</label>
+                        <label for="context">Barrackpore Rastraguru Surendranath College</label>
+                        <label for="address"><img src="Components/svg/address-book-regular.svg" alt="">6, River Side Rd, Cantonment, Kolkata, Barrackpur Cantonment, West Bengal 700120</label>
                         <label for="phone-no"><img src="Components/svg/phone-solid.svg" alt="">+91 9064763715</label>
                         <label for="email"><img src="Components/svg/envelope-regular.svg" alt="">oaa_group12@hofe.com</label>
-                        <label for="website"><img src="Components/svg/globe-solid.svg" alt=""><a href="index.php" class="link">www.hotels.com</a></label>
+                        <label for="website"><img src="Components/svg/globe-solid.svg" alt=""><a href="index.php" class="link">www.hofe.com</a></label>
                         <form action="#" method="post">
                             <div class="inp">
                                 <input name="name" id="name" type="text" placeholder="Name">
@@ -105,7 +104,7 @@ echo '
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">

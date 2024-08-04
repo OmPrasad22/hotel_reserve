@@ -74,7 +74,7 @@ echo'
         <div class="login-div">
             <div class="login-wrap">
                 <div class="login">
-                    <img src="Components/IND.png" alt="">
+                    <img src="Components/man.png" alt="">
                 </div>
                 <div class="login">
                     <div class="login-data">
@@ -111,7 +111,7 @@ echo'
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">

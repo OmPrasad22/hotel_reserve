@@ -29,7 +29,6 @@ echo '
                 echo '<label id="dp" hidden>';echo $_SESSION['dp'];echo'</label>';
             }
             echo '<label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">Hello! I am aao, the personal assistant of HöFE who will help you!</label>
-            <label for="bot" id="bot"><img src="Components/svg/chat.png" alt="">I can help you find the best hotels on this page.</label>
             <label for="bot" id="bot" name="bot"><img src="Components/svg/chat.png" alt="">Please send a message below.</label>
         </div>
         <input type="text" id="chatinp">
@@ -67,27 +66,27 @@ echo '
             <div class="services-wrap">
                 <div class="content">
                     <label for="location"><img src="Components/svg/location-dot-solid.svg" alt="">Accessible Location</label>
-                    <p class="con">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium itaque non earum, asperiores libero molestiae dicta quos tenetur sunt.</p>
+                    <p class="con">Hotels are easy to reach by car or public transportation may be more appealing to guests than one that is difficult to access.</p>
                 </div>
                 <div class="content">
-                    <label for="open"><img src="Components/svg/clock-regular.svg" alt="">Open 24/7</label>
-                        <p class="con">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium itaque non earum, asperiores libero molestiae dicta quos tenetur sunt.</p>
+                    <label for="open"><img src="Components/svg/clock-regular.svg" alt="">Open 24*7</label>
+                        <p class="con">Our hotels are available 24*7 which makes it suitable for our customers to enjoy the cuisine at any time.</p>
                 </div>
                 <div class="content">
                     <label for="reservation"><img src="Components/svg/calendar-regular.svg" alt="">Easy Reservation</label>
-                    <p class="con">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium itaque non earum, asperiores libero molestiae dicta quos tenetur sunt.</p>
+                    <p class="con">Rooms can easily be reserved in our hotel reservation system with just a click and allow you to enjoy the luxury items in our hotels.</p>
                 </div>
                 <div class="content">
                     <label for="staff"><img src="Components/svg/user-tie-solid.svg" alt="">Friendly Staff</label>
-                    <p class="con">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium itaque non earum, asperiores libero molestiae dicta quos tenetur sunt.</p>
+                    <p class="con">Hotel staff are the backbone of any hospitality establishment, embodying the service and operational excellence that define a hotel`s reputation.</p>
                 </div>
                 <div class="content">
                     <label for="wifi"><img src="Components/svg/wifi-solid.svg" alt="">Free Wifi</label>
-                    <p class="con">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium itaque non earum, asperiores libero molestiae dicta quos tenetur sunt.</p>
+                    <p class="con">Guests assign free Wi-Fi more important than privacy. Hence, it is clear how hotel guests are assigning more importance to free internet access over anything else.</p>
                 </div>
                 <div class="content">
                     <label for="parking"><img src="Components/svg/square-parking-solid.svg" alt="">Large Parking Area</label>
-                    <p class="con">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium itaque non earum, asperiores libero molestiae dicta quos tenetur sunt.</p>
+                    <p class="con">Our hotels provide sufficient area of parking areas for the customers luxury vehicle so that they can park them without hesitation and enjoy the cuisine.</p>
                 </div>
             </div>
         </div>
@@ -108,7 +107,7 @@ echo '
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">

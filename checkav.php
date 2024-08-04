@@ -59,41 +59,37 @@ echo '
                 if(mysqli_num_rows($result2)> 0){
                     while($row4=mysqli_fetch_array($result2)){
                         if(number_format($row4['avail'])==0){
-                            $h=1;
+                            $h=0;
                         }
                         else{
-                            $sql3="SELECT * FROM hotel WHERE htype='".$htype."' AND hloc='".$hloc."'";
-                            $result3=mysqli_query($mysqli,$sql3);
-                            while($data1=mysqli_fetch_array($result3)){
-                                echo '<div class="content">
-                                    <label for="error" hidden>No Such Room Available !</label>
-                                    <div class="con-img"><img src="Components/';echo $data1['img'];echo '" alt=""></div>
-                                    <div class="con-data">
-                                        <form action="payment.php?uphname=';echo $data1['hname'];echo '&cd=';echo $checkin;echo'" method="post">
-                                            <label for="hotel-name">';echo $data1['hname'];echo '</label>
-                                            <div class="rating">
-                                                <img src="Components/svg/star-solid.svg" alt="">
-                                                <img src="Components/svg/star-solid.svg" alt="">
-                                                <img src="Components/svg/star-solid.svg" alt="">
-                                                <img src="Components/svg/star-solid.svg" alt="">
-                                                <img src="Components/svg/star-regular.svg" alt="">
-                                            </div>
-                                            <label for="description">';echo $data1['hdes'];echo '</label>
-                                            <label for="htype">&#9737; ';echo $data1['htype'];echo '</label>
-                                            <label for="hloc">&#9872; ';echo $data1['haddr'];echo ', ';echo $data1['hloc'];echo '</label>';
-                                            if($data1['avail']<=2 && $data1['avail']>0){
-                                                echo'<label for="left">Only ';echo $data1['avail'];echo ' rooms left</label>';
-                                                echo '<label for="price">₹';echo $data1['rent'];echo '/day</label>
-                                                <button type="submit">Book Now</button>';
-                                            }
-                                            else{
-                                                echo '<label for="price">₹';echo $data1['rent'];echo '/day</label>
-                                                <button type="submit">Book Now</button>';
-                                            }
-                                        echo'</form>
-                                    </div>
-                                </div>';
-                            }
+                            echo '<div class="content">
+                                <label for="error" hidden>No Such Room Available !</label>
+                                <div class="con-img"><img src="Components/';echo $row4['img'];echo '" alt=""></div>
+                                <div class="con-data">
+                                    <form action="payment.php?uphname=';echo $row4['hname'];echo '&cd=';echo $checkin;echo'" method="post">
+                                        <label for="hotel-name">';echo $row4['hname'];echo '</label>
+                                        <div class="rating">
+                                            <img src="Components/svg/star-solid.svg" alt="">
+                                            <img src="Components/svg/star-solid.svg" alt="">
+                                            <img src="Components/svg/star-solid.svg" alt="">
+                                            <img src="Components/svg/star-solid.svg" alt="">
+                                            <img src="Components/svg/star-regular.svg" alt="">
+                                        </div>
+                                        <label for="description">';echo $row4['hdes'];echo '</label>
+                                        <label for="htype">&#9737; ';echo $row4['htype'];echo '</label>
+                                        <label for="hloc">&#9872; ';echo $row4['haddr'];echo ', ';echo $row4['hloc'];echo '</label>';
+                                        if($row4['avail']<=2 && $row4['avail']>0){
+                                            echo'<label for="left">Only ';echo $row4['avail'];echo ' rooms left</label>';
+                                            echo '<label for="price">₹';echo $row4['rent'];echo '/day</label>
+                                            <button type="submit">Book Now</button>';
+                                        }
+                                        else{
+                                            echo '<label for="price">₹';echo $row4['rent'];echo '/day</label>
+                                            <button type="submit">Book Now</button>';
+                                        }
+                                    echo'</form>
+                                </div>
+                            </div>';
                         }
                     }
                 }
@@ -124,7 +120,7 @@ echo '
                         <li><a href="services.php">Services</a></li>
                         <li><a href="blog.php">Blog</a></li>
                         <li><a href="contact.php">Contact</a></li>
-                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="#">About us</a></li>
                     </ul>
                 </div>
                 <div class="data">
