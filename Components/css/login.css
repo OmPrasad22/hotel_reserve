@@ -1,0 +1,88 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.login-div{
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+}
+.login-div .login-wrap{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.login-div .login-wrap .login{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+.login-div .login-wrap .login img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+.login-div .login-wrap .login .login-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10%;
+    height: auto;
+}
+.login-div .login-wrap .login .login-data .form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.login-div .login-wrap .login .login-data .form label{
+    width: 50%;
+    padding-bottom: 2%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: chocolate;
+}
+.login-div .login-wrap .login .login-data .form input{
+    width: 50%;
+    margin-bottom: 5%;
+    padding: 2%;
+    background-color: gainsboro;
+    font-size: 100%;
+    border-radius: 25px;
+}
+.login-div .login-wrap .login .login-data input[type="Submit"]{
+    background-color: chocolate;
+    padding: 2%;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    border-radius: 25px;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+}
+.login-div .login-wrap .login .login-data input[type="Submit"]:hover{
+    color: black;
+    background-color: gray;
+    width: 35%;
+    transition: 0.5s;
+}
+.login-div .login-wrap .login .login-data .form a{
+    text-decoration: none;
+    color: chocolate;
+    font-weight: bold;
+}
+.login-div .login-wrap .login .login-data .form a:hover{
+    color: black;
+    font-size: 101%;
+    transition: 0.5s;
+}

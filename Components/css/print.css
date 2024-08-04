@@ -1,0 +1,84 @@
+body{
+    margin: 3%;
+    padding: 3%;
+    border: 1px solid black;
+    line-height: 1.5;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 90vmax;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid chocolate;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+header img{
+    width: 20vmax;
+}
+header div{
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 125%;
+    line-height: 1;
+}
+header div label[for="hname"]{
+    color: chocolate;
+    font-size: 150%;
+    font-weight: bold;
+}
+.billto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3%;
+    font-size: large;
+    font-weight: normal;
+}
+.billto .userdel{
+    display: flex;
+    flex-direction: column;
+}
+.billdat label[for="rd"],label[for="bd"],label[for="lo"],label[for="ps"]{
+    font-weight: bold;
+    color: chocolate;
+}
+table{
+    margin: 5%;
+    padding: 0.5% 3% 0.5% 3%;
+    width: 90%;
+    border-collapse: collapse;
+}
+table th,td{
+    border: 1px solid black;
+    padding: 0.5%;
+    background-color: chocolate;
+    font-size: large;
+    text-align: center;
+}
+table td{
+    background-color: gainsboro;
+    border: 1px solid gray;
+}
+table .tot{
+    text-align: start;
+    padding-left: 65%;
+    font-weight: bolder;
+    font-size: 125%;
+}
+table .sign{
+    border: none;
+    background-color: white;
+    padding-top: 25%;
+    padding-right: 5%;
+    text-align: end;
+}
+footer{
+    margin: 3%;
+    margin-top: 20%;
+    border-top: 2px solid chocolate;
+}

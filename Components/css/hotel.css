@@ -1,0 +1,123 @@
+.hotel{
+    width: 100%;
+    height: auto;
+    padding: 3%;
+}
+.hotel-wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hotel-wrap label[for="error"]{
+    font-weight: bolder;
+    font-size: 200%;
+    margin: 5%;
+    width: 90%;
+    text-align: center;
+}
+.content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 1%;
+    margin-bottom: 2%;
+    background-color: gainsboro;
+}
+.con-img{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content img{
+    width: 100%;
+    height: 100%;    
+    border-radius: 25px;
+}
+.rating{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 1% 0% 1% 2%;
+}
+.rating img{
+    width: 3%;
+    height: auto;
+}
+.con-data{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.con-data label{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 2%;
+}
+.con-data label[for="hotel-name"]{
+    padding: 2% 0% 0% 2%;
+    font-size: 175%;
+    font-weight: bolder;
+}
+.con-data label[for="description"]{
+    width: 100%;
+    height: auto;
+    font-size: large;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    text-align: start;
+}
+.con-data label[for="price"]{
+    font-size: 150%;
+    font-weight: bolder;
+    padding-bottom: 1%;
+}
+.con-data label[for="htype"]{
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 0%;
+    padding-top: 1%;
+}
+.con-data label[for="hloc"]{
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.con-data label[for="left"]{
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 1%;
+    color: red;
+    padding-top: 0.5%;
+}
+.con-data button{
+    margin-left: 2%;
+    background-color: chocolate;
+    color: white;
+    width: 16%;
+    padding: 1%;
+    font-size: 130%;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px 5px 20px 5px;
+}
+.con-data button:hover{
+    color: black;
+    background-color: gray;
+    width: 17%;
+    transition: 0.5s;
+}
